@@ -1,0 +1,40 @@
+<!DOCTYPE hyml>
+<html> 
+  <head>
+    <style>
+      body, html {
+          height: 100%;
+          margin: 0;
+      }
+      #container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center; 
+          align-items: center;    
+          height: 100vh;          
+          text-align: center;
+      }
+  </style>
+  </head>
+  <body style = "background-color:beige">
+    <h1>Collier's personal website</h1>
+    <p style = "color: darkgreen; font-size:larger">Hello World! bc i cant think of anything else... This website is an experiment with javascript integration into html.</p>
+    <img src = "https://www.scientecheasy.com/wp-content/uploads/2021/12/adding-javascript-in-html.png" style="width:600px; height: 400px;">
+    
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById("container");
+        let fontSize = 32; // Starting font size in px
+
+        for (let i = 1; i <= fontSize+i; i++) {
+            const p = document.createElement("p");
+            p.textContent = `This is line ${i}, font size ${fontSize}px`;
+            p.style.fontSize = `${fontSize}px`; // Set the font size
+            container.appendChild(p);
+            fontSize -= 1; // Decrease font size by 1px each time
+        }
+    </script>
+  </body>
+
+</html>
